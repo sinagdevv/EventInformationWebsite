@@ -72,7 +72,8 @@ a {
 .skip-link:focus { left: 0; }
 
 .wrap {
-    width: min(1280px, 100% - 2 * var(--gutter));
+    max-width: calc(1280px + 2 * var(--gutter));
+    padding-inline: 20px;
     margin-inline: auto;
 }
 
@@ -123,7 +124,7 @@ hr {
     align-items: center;
     justify-content: space-between;
     gap: 0 24px;
-    padding: 10px 0;
+    padding-block: 10px;
 }
 
 .brand {
@@ -437,7 +438,7 @@ code {
 .table-wrap {
     margin-top: 24px;
     overflow-x: auto;
-    background: #fff;
+    padding-top: 8px;
     border-top: 4px solid var(--navy);
 }
 
@@ -676,6 +677,7 @@ pre {
 /* Tablet and up */
 @media (min-width: 768px) {
     :root { --gutter: 32px; --section: 96px; }
+    .wrap { padding-inline: 32px; }
 
     .hero { padding-top: 80px; }
     .program { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; }
@@ -685,6 +687,7 @@ pre {
 /* Desktop */
 @media (min-width: 1024px) {
     :root { --gutter: 48px; --section: 112px; }
+    .wrap { padding-inline: 48px; }
 
     .hero { padding-top: 96px; }
     .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; }
