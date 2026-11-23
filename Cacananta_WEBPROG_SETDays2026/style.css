@@ -10,7 +10,13 @@
     --light: #F7F8FA;
     --line: #D5DCE6;
     --gutter: 20px;
-    --section: 72px;
+    --s1: 8px;
+    --s2: 16px;
+    --s3: 24px;
+    --s4: 32px;
+    --s5: 48px;
+    --s6: 64px;
+    --section: var(--s5);
     --heading: "Plus Jakarta Sans", "Inter", Arial, sans-serif;
 }
 
@@ -90,7 +96,7 @@ hr {
 /* Heading on the left, content on the right (stacked on mobile) */
 .split {
     display: grid;
-    gap: 16px 64px;
+    gap: var(--s2) var(--s4);
     grid-template-columns: minmax(0, 1fr);
     align-items: start;
 }
@@ -207,7 +213,7 @@ hr {
 
 /* Hero: text beside the campus photograph */
 .hero {
-    padding: 48px 0 56px;
+    padding: var(--s4) 0 var(--s5);
     border-bottom: 1px solid var(--line);
 }
 
@@ -299,7 +305,7 @@ li { margin-bottom: 0.6em; }
 /* Activities: program listing with large numbers */
 .program {
     display: grid;
-    margin-top: 56px;
+    margin-top: var(--s5);
     padding: 0;
     list-style: none;
     counter-reset: activity;
@@ -309,7 +315,7 @@ li { margin-bottom: 0.6em; }
 .program li {
     position: relative;
     margin: 0;
-    padding: 28px 0 28px 76px;
+    padding: var(--s3) 0 var(--s3) 76px;
     border-top: 1px solid var(--line);
     counter-increment: activity;
 }
@@ -348,8 +354,8 @@ li { margin-bottom: 0.6em; }
 .program .day { color: var(--muted); }
 
 .extras {
-    margin-top: 72px;
-    gap: 40px 64px;
+    margin-top: var(--s5);
+    gap: var(--s5) var(--s5);
 }
 
 .extras h3,
@@ -438,12 +444,12 @@ code {
 
 table {
     width: 100%;
-    min-width: 720px;
+    min-width: 920px;
     border-collapse: collapse;
 }
 
 th, td {
-    padding: 18px 20px;
+    padding: var(--s2);
     text-align: left;
     vertical-align: top;
     border-bottom: 1px solid var(--line);
@@ -480,7 +486,7 @@ tbody[hidden] { display: none; }
 
 /* Venue: the image shrinks with the column (never below 600px, then it scrolls);
    script.js rescales the <area> coordinates. Without JS it stays at native size. */
-.venue-map { margin: 56px 0 0; }
+.venue-map { margin: var(--s4) 0 0; }
 
 .venue-scroll { overflow-x: auto; }
 
@@ -520,12 +526,12 @@ tbody[hidden] { display: none; }
 /* Highlights: three consistent features, the date is the visual anchor */
 .highlights {
     display: grid;
-    gap: 48px 56px;
-    margin-top: 56px;
+    gap: var(--s5);
+    margin-top: var(--s5);
 }
 
 .highlight {
-    padding-top: 28px;
+    padding-top: var(--s3);
     border-top: 1px solid var(--navy);
 }
 
@@ -567,7 +573,7 @@ tbody[hidden] { display: none; }
 }
 
 /* Guidelines */
-.guidelines { margin-top: 56px; }
+.guidelines { margin-top: var(--s5); }
 
 .resources {
     margin: 2rem 0 0;
@@ -625,7 +631,7 @@ pre {
 
 /* Footer */
 .site-footer {
-    padding: 64px 0 28px;
+    padding: var(--s5) 0 var(--s3);
     background: var(--navy);
     border-top: 4px solid var(--gold);
     color: #e6ecf7;
@@ -646,7 +652,7 @@ pre {
 
 .footer-grid {
     display: grid;
-    gap: 32px 64px;
+    gap: var(--s4) var(--s6);
 }
 
 .footer-brand {
@@ -686,24 +692,24 @@ pre {
 
 /* Tablet and up */
 @media (min-width: 768px) {
-    :root { --gutter: 32px; --section: 96px; }
+    :root { --gutter: 32px; --section: 56px; }
     .wrap { padding-inline: 32px; }
 
-    .hero { padding: 64px 0 64px; }
+    .hero { padding: var(--s5) 0; }
     .program { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; }
     .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
-    :root { --gutter: 48px; --section: 112px; }
+    :root { --gutter: 48px; --section: var(--s6); }
     .wrap { padding-inline: 48px; }
 
-    .hero { padding: 72px 0 80px; }
+    .hero { padding: var(--s5) 0 var(--s6); }
     .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 64px; }
     .hero-photo img { aspect-ratio: 4 / 3; }
 
-    .split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .split { grid-template-columns: minmax(0, 7fr) minmax(0, 13fr); column-gap: var(--s5); }
     .highlights { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .guidelines { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); }
 }
