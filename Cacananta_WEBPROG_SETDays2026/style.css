@@ -198,12 +198,11 @@ hr {
 .hero {
     background: var(--navy);
     color: #fff;
-    padding: clamp(56px, 10vw, 104px) 0;
+    padding: clamp(56px, 10vw, 104px) var(--gutter);
 }
 
-.hero-copy {
-    max-width: 760px;
-    margin-inline: max(var(--gutter), (100% - 1240px) / 2);
+.hero > .wrap {
+    width: min(1240px, 100%);
 }
 
 .hero h1 {
@@ -304,8 +303,8 @@ li {
     margin-top: clamp(32px, 5vw, 56px);
 }
 
-.activity-list + .cols {
-    padding-top: clamp(32px, 5vw, 56px);
+.cols-ruled {
+    padding-top: 40px;
     border-top: 1px solid var(--line);
 }
 
@@ -445,7 +444,7 @@ tbody th {
 }
 
 .announcement {
-    padding-left: clamp(16px, 3vw, 28px);
+    padding-left: 24px;
     border-left: 3px solid var(--navy);
 }
 
