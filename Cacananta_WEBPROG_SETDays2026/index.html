@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body id="top">
 
@@ -23,7 +24,9 @@
                 </span>
             </a>
 
-            <nav aria-label="Main navigation">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+
+            <nav id="site-nav" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -40,29 +43,27 @@
         <section id="home" class="hero">
             <div class="wrap hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow">School of Engineering and Technology</p>
-                    <h1>SET Days 2026</h1>
+                    <p class="identifier">National University — Fairview</p>
+                    <h1>SET Days<br>2026</h1>
                     <p class="tagline">Learn. Build. Innovate.</p>
                     <p class="hero-intro">
                         A proposed three-day celebration of computing, engineering, and student innovation, with workshops, competitions, and project exhibits.
                     </p>
-                    <p><a class="button" href="#schedule">View the schedule</a></p>
                 </div>
 
-                <dl class="hero-facts">
-                    <div>
-                        <dt>Dates</dt>
-                        <dd>December 2–4, 2026</dd>
-                    </div>
-                    <div>
-                        <dt>Venue</dt>
-                        <dd>National University – Fairview</dd>
-                    </div>
-                    <div>
-                        <dt>Program</dt>
-                        <dd>3 days · 6 activities</dd>
-                    </div>
-                </dl>
+                <p class="hero-date" aria-label="December 2 to 4, 2026">
+                    <span class="date-month">Dec</span>
+                    <span class="date-days">02—04</span>
+                    <span class="date-year">2026</span>
+                </p>
+            </div>
+
+            <div class="wrap">
+                <ul class="hero-meta">
+                    <li>National University – Fairview, Quezon City</li>
+                    <li>Three days, six proposed activities</li>
+                    <li><a href="#schedule">View the schedule &rarr;</a></li>
+                </ul>
             </div>
         </section>
 
@@ -87,10 +88,12 @@
 
         <section id="activities" class="section">
             <div class="wrap">
-                <h2>Proposed Activities</h2>
-                <p class="lead">Six proposed workshops, competitions, and exhibitions across the three days.</p>
+                <div class="split">
+                    <h2>Proposed Activities</h2>
+                    <p class="lead">Six proposed workshops, competitions, and exhibitions across the three days.</p>
+                </div>
 
-                <ul class="activity-list">
+                <ul class="program">
                     <li>
                         <span class="day">Day 1 · Workshop</span>
                         <h3>AI and Machine Learning Workshop</h3>
@@ -123,10 +126,10 @@
                     </li>
                 </ul>
 
-                <div class="cols cols-ruled">
+                <div class="split extras">
                     <div>
                         <h3>How to Join an Activity</h3>
-                        <ol>
+                        <ol class="steps">
                             <li>Pick an activity above and note its day and room in the <a href="#schedule">schedule</a>.</li>
                             <li>Check whether it is an individual workshop or a team competition of two to three students.</li>
                             <li>Bring a laptop and your school ID for laboratory sessions.</li>
@@ -153,8 +156,17 @@
 
         <section id="schedule" class="section tint">
             <div class="wrap">
-                <h2>Three-Day Event Schedule</h2>
-                <p class="lead">Proposed sessions for December 2, 3, and 4, 2026.</p>
+                <div class="split">
+                    <h2>Three-Day Event Schedule</h2>
+                    <p class="lead">Proposed sessions for December 2, 3, and 4, 2026.</p>
+                </div>
+
+                <div class="day-filter" role="group" aria-label="Filter schedule by day" hidden>
+                    <button type="button" data-day="all" aria-pressed="true">All Days</button>
+                    <button type="button" data-day="1" aria-pressed="false">December 2</button>
+                    <button type="button" data-day="2" aria-pressed="false">December 3</button>
+                    <button type="button" data-day="3" aria-pressed="false">December 4</button>
+                </div>
 
                 <div class="table-wrap" role="region" aria-label="Three-day event schedule" tabindex="0">
                     <table>
@@ -167,7 +179,7 @@
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody data-day="1">
                             <tr>
                                 <th scope="rowgroup" rowspan="3"><span class="day-no">Day 1</span>December 2, 2026</th>
                                 <td class="time">08:30 AM – 10:00 AM</td>
@@ -186,7 +198,7 @@
                             </tr>
                         </tbody>
 
-                        <tbody>
+                        <tbody data-day="2">
                             <tr>
                                 <th scope="rowgroup" rowspan="2"><span class="day-no">Day 2</span>December 3, 2026</th>
                                 <td class="time">09:00 AM – 12:00 PM</td>
@@ -200,7 +212,7 @@
                             </tr>
                         </tbody>
 
-                        <tbody>
+                        <tbody data-day="3">
                             <tr>
                                 <th scope="rowgroup" rowspan="3"><span class="day-no">Day 3</span>December 4, 2026</th>
                                 <td class="time">09:00 AM – 12:00 PM</td>
@@ -224,15 +236,22 @@
         </section>
 
         <section id="venue" class="section">
-            <div class="wrap">
-                <h2>Event Venue</h2>
-                <div class="prose">
-                    <p>
-                        SET Days 2026 is proposed to take place at the National University – Fairview campus in the SM City Fairview Complex, Quirino Highway, Quezon City.
-                    </p>
-                    <p>
-                        The Main Auditorium would host the opening and closing programs, while workshops and competitions would use the 4th Floor SET laboratories.
-                    </p>
+            <div class="wrap split">
+                <div>
+                    <h2>Event Venue</h2>
+                    <div class="prose">
+                        <p>
+                            SET Days 2026 is proposed to take place at the National University – Fairview campus in the SM City Fairview Complex, Quirino Highway, Quezon City.
+                        </p>
+                        <p>
+                            The Main Auditorium would host the opening and closing programs, while workshops and competitions would use the 4th Floor SET laboratories.
+                        </p>
+                    </div>
+
+                    <ul class="link-list">
+                        <li><a href="#schedule">Main Auditorium: event schedule</a></li>
+                        <li><a href="#activities">SET Laboratories: proposed activities</a></li>
+                    </ul>
                 </div>
 
                 <figure class="venue-map">
@@ -252,18 +271,15 @@
                     <area shape="rect" coords="24,24,348,256" href="#schedule" alt="Main Auditorium – view the event schedule" title="Main Auditorium – view the event schedule">
                     <area shape="rect" coords="372,24,696,256" href="#activities" alt="SET Laboratories – view the proposed activities" title="SET Laboratories – view the proposed activities">
                 </map>
-
-                <ul class="link-list">
-                    <li><a href="#schedule">Main Auditorium: event schedule</a></li>
-                    <li><a href="#activities">SET Laboratories: proposed activities</a></li>
-                </ul>
             </div>
         </section>
 
         <section id="highlights" class="section tint">
             <div class="wrap">
-                <h2>Featured Highlights</h2>
-                <p class="lead">A proposed keynote speaker, student organization, and capstone exhibition.</p>
+                <div class="split">
+                    <h2>Featured Highlights</h2>
+                    <p class="lead">A proposed keynote speaker, student organization, and capstone exhibition.</p>
+                </div>
 
                 <div class="highlight">
                     <div class="highlight-when">
@@ -302,13 +318,15 @@
 
         <section id="guidelines" class="section">
             <div class="wrap">
-                <h2>Participation Guidelines</h2>
-                <p class="lead">These instructions are proposed for academic demonstration purposes.</p>
+                <div class="split">
+                    <h2>Participation Guidelines</h2>
+                    <p class="lead">These instructions are proposed for academic demonstration purposes.</p>
+                </div>
 
-                <div class="cols">
+                <div class="split guidelines">
                     <div>
                         <h3>How to Join</h3>
-                        <ol>
+                        <ol class="steps">
                             <li>Confirm that you are an enrolled SET student at National University – Fairview for AY 2026–2027.</li>
                             <li>Review the <a href="#schedule">schedule</a> and choose a workshop or competition.</li>
                             <li>Register individually for workshops, or as a team of two to three students for competitions.</li>
@@ -325,18 +343,16 @@
                     <div class="announcement">
                         <div class="notice-head">
                             <img src="images/nu-logo.png" alt="" width="35" height="42">
-                            <div>
-                                <span>National University – Fairview</span>
-                                <h3>Participation Announcement</h3>
-                            </div>
+                            <p>National University – Fairview<br>School of Engineering and Technology</p>
                         </div>
-                        <p class="note">Fictional academic example. Not an official National University notice.</p>
+                        <h3>Participation Announcement</h3>
 <pre>The School of Engineering and Technology invites NU Fairview students to take part in SET Days 2026, a proposed three-day celebration of computing, engineering, and student innovation.
 
 Event Dates: December 2–4, 2026
 Location: National University – Fairview, Quezon City
 
 All workshops, competitions, and exhibition slots on this site are proposed and subject to confirmation by the college administration and student council.</pre>
+                        <p class="note">Fictional example for academic purposes. Not an official National University notice.</p>
                     </div>
                 </div>
             </div>

@@ -22,29 +22,37 @@ details.
 
 3. WEBSITE CONCEPT AND THEME
 ----------------------------
-A minimalist, university-style event website inspired by the official
+An editorial, university-style event website inspired by the official
 National University website (https://www.nu.edu.ph/).
 
 - Colors: NU navy (#082F79), brand blue (#0757C8), and gold (#FFC400) on
   white and light gray (#F7F8FA). Text is #172033 with #526176 for
   secondary text.
 - Typography: Plus Jakarta Sans for headings, Inter for body text, with
-  Arial as the fallback. Body text is 17-18px and headings scale from
-  28px (mobile) to 64px (hero, desktop).
-- Layout: a typography-led hero (title on the left, key facts on the
-  right), a numbered three-column activity grid, a styled schedule table,
-  and a notice-style announcement, in a 1240px-wide single page with five
-  navigation links.
-- CSS Grid and Flexbox layouts with mobile-first breakpoints at 768px and
-  1024px. No photographs are used; the hero is built from typography only.
+  Arial as the fallback. Body text is 17-18px and section headings are
+  36-42px and the hero heading scales from 44px (mobile) to 76px (desktop).
+- Layout: a university-event-program style. The hero sets "SET Days 2026"
+  beside the dates (DEC 02-04, 2026) as large type, followed by an
+  editorial About spread, a numbered two-column activity program, a
+  schedule table, venue, highlights, guidelines, and a letterhead-style
+  announcement, in a 1280px-wide single page with five navigation links.
+- Responsive CSS Grid and Flexbox with breakpoints at 768px and 1024px.
+  No photographs are used.
 
 
 4. TECHNOLOGIES USED
 --------------------
 - HTML5
 - CSS3
+- A short vanilla JavaScript file (script.js), no libraries or frameworks.
 
-No JavaScript, frameworks, or animation libraries are used.
+The website is fully readable without JavaScript. script.js only adds:
+1. A Menu button for the navigation on small screens (aria-expanded,
+   closes on link click or Escape).
+2. Day filter buttons (All Days, December 2, 3, 4) that hide the other
+   days' <tbody> groups of the existing schedule table.
+3. Recalculation of the image-map <area> coordinates from their original
+   values when the venue image is resized.
 
 
 5. WEBSITE SECTIONS
@@ -54,7 +62,7 @@ Navigation (Home, About, Activities, Schedule, Contact) links to:
 - Home          Title, tagline, short introduction, and key facts.
 - About         Three paragraphs on the event, its purpose, and participants.
 - Activities    Six proposed activities, steps to join, and key terms.
-- Schedule      Table covering December 2, 3, and 4, 2026.
+- Schedule      Table covering December 2, 3, and 4, 2026, with day filters.
 - Venue         Venue description and an image map with two clickable zones.
 - Highlights    Three proposed highlights.
 - Participation Guidelines
@@ -105,12 +113,12 @@ as implementation):
 Assets and fonts:
 - images/nu-logo.png: National University crest, supplied by the student.
 - images/event-guide.svg: simple labelled venue guide written as SVG for
-  this project. It is illustrative only, not a photograph or a real floor
+  this project in the site colors. It is illustrative only, not a photograph or a real floor
   plan.
 - Fonts: Inter and Plus Jakarta Sans, loaded from Google Fonts,
   https://fonts.google.com/
 
-AI assistance: the final revision of index.html, style.css, and this README
+AI assistance: the final revision of index.html, style.css, script.js, and this README
 was prepared with the help of an AI coding assistant (Claude Code). This is
 disclosed here because the assignment restricts AI-generated work; the
 student is responsible for confirming this with the instructor.
@@ -120,3 +128,10 @@ ASSIGNMENT 2. All activities, schedules, speakers, venues, organizations,
 contact details, and the sample announcement are fictional or proposed
 unless officially confirmed. This is not an official National University
 event announcement.
+
+Testing performed: layouts were checked from headless Microsoft Edge
+screenshots at 1440px, 768px, 430px, 375px and 320px widths. The day
+filter, menu button, Escape key, link-click close, and image-map scaling
+were checked with a scripted DOM test in Edge. 1920px, 1366px and 1024px
+were not inspected, and real-device, screen-reader, and keyboard-only
+testing was not performed.
