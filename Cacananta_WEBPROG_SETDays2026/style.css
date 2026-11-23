@@ -205,16 +205,16 @@ hr {
 .js .nav-list { flex-direction: column; }
 .js .nav-list a { padding: 14px 0; border-bottom: 1px solid var(--line); }
 
-/* Hero: typography carries the identity */
+/* Hero: text beside the campus photograph */
 .hero {
-    padding: 56px 0 0;
+    padding: 48px 0 56px;
     border-bottom: 1px solid var(--line);
 }
 
 .hero-grid {
     display: grid;
     gap: 40px;
-    align-items: end;
+    align-items: center;
 }
 
 .identifier {
@@ -230,69 +230,63 @@ hr {
 
 .hero h1 {
     margin-bottom: 0.25em;
-    font-size: clamp(2.75rem, 8vw, 4.75rem);
+    font-size: clamp(2.25rem, 5.5vw, 4.25rem);
     font-weight: 800;
     letter-spacing: -0.035em;
-    line-height: 1;
+    line-height: 1.02;
 }
 
 .tagline {
     margin-bottom: 1rem;
     font-family: var(--heading);
-    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    font-size: clamp(1.375rem, 2.4vw, 1.5rem);
     font-weight: 700;
     color: var(--blue);
 }
 
 .hero-intro {
-    max-width: 48ch;
+    max-width: 46ch;
     font-size: 1.1875rem;
     color: var(--muted);
 }
 
-.hero-date {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    font-family: var(--heading);
-    font-weight: 800;
-    line-height: 0.95;
-    color: var(--navy);
-}
-
-.date-month {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: var(--blue);
-}
-
-.date-days {
-    font-size: clamp(4.25rem, 13vw, 9.5rem);
-    letter-spacing: -0.04em;
-    white-space: nowrap;
-}
-
-.date-year {
-    display: inline-block;
-    align-self: flex-start;
-    margin-top: 16px;
-    padding: 4px 14px;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    background: var(--gold);
-}
-
 .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 40px;
-    margin: 48px 0 0;
-    padding: 20px 0;
+    margin: 32px 0 0;
+    padding: 0;
     list-style: none;
     border-top: 1px solid var(--line);
+}
+
+.hero-meta li {
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
     font-weight: 600;
     color: var(--navy);
 }
 
-.hero-meta li { margin: 0; }
+.meta-label {
+    display: inline-block;
+    min-width: 5.5rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.hero-photo { margin: 0; }
+
+.hero-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 981 / 621;
+    object-fit: cover;
+}
+
+.hero-photo figcaption {
+    margin-top: 10px;
+    font-size: 0.875rem;
+    color: var(--muted);
+}
 
 /* Lists */
 ul, ol {
@@ -532,7 +526,7 @@ tbody[hidden] { display: none; }
 
 .highlight {
     padding-top: 28px;
-    border-top: 4px solid var(--navy);
+    border-top: 1px solid var(--navy);
 }
 
 .highlight-date {
@@ -580,11 +574,10 @@ tbody[hidden] { display: none; }
     color: var(--muted);
 }
 
-/* Announcement: institutional notice, one gold rule */
+/* Announcement: plain institutional notice */
 .announcement {
-    padding: 32px;
-    border: 1px solid var(--line);
-    border-top: 4px solid var(--gold);
+    padding-top: 24px;
+    border-top: 3px solid var(--navy);
 }
 
 .notice-head {
@@ -696,7 +689,7 @@ pre {
     :root { --gutter: 32px; --section: 96px; }
     .wrap { padding-inline: 32px; }
 
-    .hero { padding-top: 80px; }
+    .hero { padding: 64px 0 64px; }
     .program { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 64px; }
     .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -706,10 +699,9 @@ pre {
     :root { --gutter: 48px; --section: 112px; }
     .wrap { padding-inline: 48px; }
 
-    .hero { padding-top: 96px; }
-    .hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; }
-    .hero-date { align-items: flex-end; text-align: right; }
-    .date-year { align-self: flex-end; }
+    .hero { padding: 72px 0 80px; }
+    .hero-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 64px; }
+    .hero-photo img { aspect-ratio: 4 / 3; }
 
     .split { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
     .highlights { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -733,7 +725,6 @@ pre {
     .header-inner { column-gap: 12px; }
     .menu-toggle { padding: 10px 14px; }
     .menu-toggle:not([hidden]) { display: block; }
-    .announcement { padding: 24px 20px; }
     .program li { padding-left: 60px; }
     .program li::before { font-size: 2.25rem; }
 }

@@ -31,14 +31,16 @@ National University website (https://www.nu.edu.ph/).
   secondary text.
 - Typography: Plus Jakarta Sans for headings, Inter for body text, with
   Arial as the fallback. Body text is 17-18px and section headings are
-  36-42px and the hero heading scales from 44px (mobile) to 76px (desktop).
-- Layout: a university-event-program style. The hero sets "SET Days 2026"
-  beside the dates (DEC 02-04, 2026) as large type, followed by an
-  editorial About spread, a numbered two-column activity program, a
-  schedule table, venue guide, highlights, guidelines, and a letterhead-style
-  announcement, in a 1280px-wide single page with five navigation links.
+  36-42px and the hero heading scales from 36px (mobile) to 68px (desktop).
+- Layout: an editorial university-event page. The hero sets the title,
+  tagline, dates, and location beside the campus photograph, followed by
+  an About spread, a numbered two-column activity program, a schedule
+  table with day filters, a light two-zone venue guide, three consistent
+  highlights, participation guidelines with a plain notice-style
+  announcement, and a footer with the student contact, in a 1280px-wide
+  single page with five navigation links.
 - Responsive CSS Grid and Flexbox with breakpoints at 768px and 1024px.
-  No photographs are used.
+  One photograph is used (see Photography below).
 
 
 4. TECHNOLOGIES USED
@@ -60,7 +62,7 @@ The website is fully readable without JavaScript. script.js only adds:
 -------------------
 Navigation (Home, About, Activities, Schedule, Contact) links to:
 
-- Home          Title, tagline, short introduction, and key facts.
+- Home          Title, tagline, introduction, dates, location, campus photo.
 - About         Three paragraphs on the event, its purpose, and participants.
 - Activities    Six proposed activities, steps to join, and key terms.
 - Schedule      Table covering December 2, 3, and 4, 2026, with day filters.
@@ -70,8 +72,8 @@ Navigation (Home, About, Activities, Schedule, Contact) links to:
                 organization, and exhibition.
 - Participation Guidelines
                 Steps to join, an external link, and a sample announcement.
-- Contact       Footer with the student contact (name, section, subject,
-                email link), the proposed fictional organizing committee,
+- Contact       Footer with the student contact (name, section, professor,
+                subject, email link), the proposed fictional organizing committee,
                 and the disclaimer.
 
 
@@ -115,14 +117,25 @@ as implementation):
 - freeCodeCamp: https://www.freecodecamp.org/learn/
 - MDN Web Docs: https://developer.mozilla.org/
 
-Photography: no National University campus photographs are used. The NU
-Terms & Conditions (https://www.nu.edu.ph/terms-and-conditions) allow
-personal, non-commercial viewing and downloading but prohibit
-reproducing or distributing site content, including images, without
-written permission, and no reuse license was found on
-https://www.nu.edu.ph/nu-fairview. The photographs were therefore not
-copied into this project. If written permission is obtained, they can be
-added with the credit "Photo: National University".
+Photography (one photograph, used once, in the Home hero):
+- File:        images/nu campus.png (981 x 621 px, unmodified)
+- Depicts:     exterior of an NU Fairview campus building (blue lower
+               facade, paneled upper block, NU crest) seen from a parking
+               area.
+- Supplied by: the student, who added the file to the project and
+               identified it as an NU Fairview campus photograph.
+- Source URL, photographer, and permission status: NOT VERIFIED. No source
+               URL or license was provided with the file, so no authorship
+               or reuse permission is claimed here. The National
+               University Terms & Conditions
+               (https://www.nu.edu.ph/terms-and-conditions) allow personal,
+               non-commercial viewing and downloading but require written
+               permission to reproduce or distribute site content. The
+               student should confirm the photograph's source and
+               permission with the instructor before publishing it.
+- Use:         illustrative campus imagery only, captioned on the page as
+               "not documentation of SET Days 2026". It is not a photo of
+               the event.
 
 Assets and fonts:
 - images/nu-logo.png: National University crest, supplied by the student.
@@ -146,9 +159,10 @@ organizing committee details, and the sample announcement are fictional or propo
 unless officially confirmed. This is not an official National University
 event announcement.
 
-Testing performed: layouts were checked from headless Microsoft Edge
-screenshots at 1440px, 768px, 430px, 375px and 320px widths. The day
-filter, menu button, Escape key, link-click close, and image-map scaling
-were checked with a scripted DOM test in Edge. 1920px, 1366px and 1024px
-were not inspected, and real-device, screen-reader, and keyboard-only
-testing was not performed.
+Testing performed: the final layout was checked from headless Microsoft
+Edge screenshots at 1440px, 768px and 375px widths (earlier revisions of
+the other sections were also viewed at 430px and 320px). The day filter,
+menu button, Escape key, and image-map scaling were checked with a
+scripted DOM test in Edge, and all internal links and image files were
+checked to resolve. 1920px, 1366px and 1024px were not inspected, and
+real-device, screen-reader, and keyboard-only testing was not performed.
