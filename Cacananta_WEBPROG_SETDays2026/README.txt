@@ -5,6 +5,7 @@ WEB PROGRAMMING ASSIGNMENT 2
 ----------------------
 Name:       John Ray Cacananta
 Section:    IT-252
+Email:      cacanantajrp@students.nu-fairview.edu.ph
 Professor:  Ms. Kris P. Garcia
 Subject:    WebProg
 University: National University - Fairview
@@ -67,7 +68,9 @@ Navigation (Home, About, Activities, Schedule, Contact) links to:
 - Highlights    Three proposed highlights.
 - Participation Guidelines
                 Steps to join, an external link, and a sample announcement.
-- Contact       Footer with committee details, email link, and disclaimer.
+- Contact       Footer with the student contact (name, section, subject,
+                email link), the proposed fictional organizing committee,
+                and the disclaimer.
 
 
 6. HTML ELEMENTS DEMONSTRATED
@@ -125,7 +128,7 @@ student is responsible for confirming this with the instructor.
 
 Academic disclaimer: this website was created for WEB PROGRAMMING
 ASSIGNMENT 2. All activities, schedules, speakers, venues, organizations,
-contact details, and the sample announcement are fictional or proposed
+organizing committee details, and the sample announcement are fictional or proposed
 unless officially confirmed. This is not an official National University
 event announcement.
 
