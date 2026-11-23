@@ -113,8 +113,19 @@ as implementation):
 - freeCodeCamp: https://www.freecodecamp.org/learn/
 - MDN Web Docs: https://developer.mozilla.org/
 
+Photography: no National University campus photographs are used. The NU
+Terms & Conditions (https://www.nu.edu.ph/terms-and-conditions) allow
+personal, non-commercial viewing and downloading but prohibit
+reproducing or distributing site content, including images, without
+written permission, and no reuse license was found on
+https://www.nu.edu.ph/nu-fairview. The photographs were therefore not
+copied into this project. If written permission is obtained, they can be
+added with the credit "Photo: National University".
+
 Assets and fonts:
 - images/nu-logo.png: National University crest, supplied by the student.
+  Property of National University; used here only as an identifier in a
+  non-commercial academic project.
 - images/event-guide.svg: simple labelled venue guide written as SVG for
   this project in the site colors. It is illustrative only, not a photograph or a real floor
   plan.
