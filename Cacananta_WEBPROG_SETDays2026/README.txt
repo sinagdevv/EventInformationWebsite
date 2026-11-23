@@ -25,14 +25,18 @@ details.
 A minimalist, university-style event website inspired by the official
 National University website (https://www.nu.edu.ph/).
 
-- Colors: NU navy (#082F79), brand blue (#0757C8), and restrained gold
-  (#FFC400) on white.
+- Colors: NU navy (#082F79), brand blue (#0757C8), and gold (#FFC400) on
+  white and light gray (#F7F8FA). Text is #172033 with #526176 for
+  secondary text.
 - Typography: Plus Jakarta Sans for headings, Inter for body text, with
-  Arial as the fallback.
-- Layout: a typography-led navy hero, plain text sections separated by
-  horizontal rules, and a single-page structure with five navigation links.
-- The design uses flexible CSS Grid and Flexbox layouts and one media query
-  (max-width: 800px) to stack two-column sections.
+  Arial as the fallback. Body text is 17-18px and headings scale from
+  28px (mobile) to 64px (hero, desktop).
+- Layout: a typography-led hero (title on the left, key facts on the
+  right), a numbered three-column activity grid, a styled schedule table,
+  and a notice-style announcement, in a 1240px-wide single page with five
+  navigation links.
+- CSS Grid and Flexbox layouts with mobile-first breakpoints at 768px and
+  1024px. No photographs are used; the hero is built from typography only.
 
 
 4. TECHNOLOGIES USED
@@ -47,7 +51,7 @@ No JavaScript, frameworks, or animation libraries are used.
 -------------------
 Navigation (Home, About, Activities, Schedule, Contact) links to:
 
-- Home          Title, tagline, dates, location, and short introduction.
+- Home          Title, tagline, short introduction, and key facts.
 - About         Three paragraphs on the event, its purpose, and participants.
 - Activities    Six proposed activities, steps to join, and key terms.
 - Schedule      Table covering December 2, 3, and 4, 2026.
@@ -71,7 +75,7 @@ Navigation (Home, About, Activities, Schedule, Contact) links to:
 - Table (table, thead, tbody, tr, th, td): the three-day schedule, grouped
   by day with rowspan.
 - Preformatted text (pre): the sample participation announcement.
-- Horizontal rules (hr): between major sections.
+- Horizontal rule (hr): between the About and Activities sections.
 - Division and span (div, span): grouping and labelling content.
 - Semantic structure: header, nav, main, section, figure, footer.
 
@@ -103,8 +107,6 @@ Assets and fonts:
 - images/event-guide.svg: simple labelled venue guide written as SVG for
   this project. It is illustrative only, not a photograph or a real floor
   plan.
-- Icons: two inline SVG icons (calendar and map pin) from Lucide,
-  https://lucide.dev/
 - Fonts: Inter and Plus Jakarta Sans, loaded from Google Fonts,
   https://fonts.google.com/
 
