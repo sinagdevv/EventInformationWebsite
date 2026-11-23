@@ -35,7 +35,7 @@ National University website (https://www.nu.edu.ph/).
 - Layout: a university-event-program style. The hero sets "SET Days 2026"
   beside the dates (DEC 02-04, 2026) as large type, followed by an
   editorial About spread, a numbered two-column activity program, a
-  schedule table, venue, highlights, guidelines, and a letterhead-style
+  schedule table, venue guide, highlights, guidelines, and a letterhead-style
   announcement, in a 1280px-wide single page with five navigation links.
 - Responsive CSS Grid and Flexbox with breakpoints at 768px and 1024px.
   No photographs are used.
@@ -65,7 +65,9 @@ Navigation (Home, About, Activities, Schedule, Contact) links to:
 - Activities    Six proposed activities, steps to join, and key terms.
 - Schedule      Table covering December 2, 3, and 4, 2026, with day filters.
 - Venue         Venue description and an image map with two clickable zones.
-- Highlights    Three proposed highlights.
+- Highlights    Three consistent proposed features: faculty (Ms. Kris P.
+                Garcia, WebProg instructor, unconfirmed), student
+                organization, and exhibition.
 - Participation Guidelines
                 Steps to join, an external link, and a sample announcement.
 - Contact       Footer with the student contact (name, section, subject,
@@ -126,9 +128,10 @@ Assets and fonts:
 - images/nu-logo.png: National University crest, supplied by the student.
   Property of National University; used here only as an identifier in a
   non-commercial academic project.
-- images/event-guide.svg: simple labelled venue guide written as SVG for
-  this project in the site colors. It is illustrative only, not a photograph or a real floor
-  plan.
+- images/event-guide.svg: light two-zone venue guide (Zone A Main
+  Auditorium, Zone B SET Laboratories) written as SVG for this project,
+  used with the HTML image map. It is illustrative only, not a photograph
+  or a real floor plan.
 - Fonts: Inter and Plus Jakarta Sans, loaded from Google Fonts,
   https://fonts.google.com/
 

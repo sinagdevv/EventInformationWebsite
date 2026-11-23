@@ -1,14 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280">
-  <rect width="720" height="280" fill="#F7F8FA"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300">
+  <rect width="960" height="300" fill="#F7F8FA"/>
   <g font-family="Arial, Helvetica, sans-serif">
-    <rect x="24" y="24" width="324" height="232" fill="#082F79"/>
-    <rect x="24" y="24" width="324" height="8" fill="#FFC400"/>
-    <text x="48" y="150" font-size="34" font-weight="700" fill="#FFFFFF">Main Auditorium</text>
-    <text x="48" y="188" font-size="19" fill="#DCE6F7">Opening, keynote and awarding</text>
+    <rect x="32" y="30" width="432" height="240" fill="#FFFFFF"/>
+    <rect x="32" y="30" width="8" height="240" fill="#FFC400"/>
+    <text x="68" y="104" font-size="64" font-weight="700" fill="#0757C8">A</text>
+    <text x="68" y="158" font-size="38" font-weight="700" fill="#082F79">Main Auditorium</text>
+    <text x="68" y="198" font-size="26" fill="#526176">Opening, keynote and awarding</text>
+    <text x="68" y="244" font-size="26" font-weight="700" fill="#0757C8">View the schedule →</text>
 
-    <rect x="372" y="24" width="324" height="232" fill="#0757C8"/>
-    <rect x="372" y="24" width="324" height="8" fill="#FFC400"/>
-    <text x="396" y="150" font-size="34" font-weight="700" fill="#FFFFFF">SET Laboratories</text>
-    <text x="396" y="188" font-size="19" fill="#E3ECFA">4th Floor · workshops, contests</text>
+    <rect x="496" y="30" width="432" height="240" fill="#FFFFFF"/>
+    <rect x="496" y="30" width="8" height="240" fill="#FFC400"/>
+    <text x="532" y="104" font-size="64" font-weight="700" fill="#0757C8">B</text>
+    <text x="532" y="158" font-size="38" font-weight="700" fill="#082F79">SET Laboratories</text>
+    <text x="532" y="198" font-size="26" fill="#526176">4th Floor workshops, contests</text>
+    <text x="532" y="244" font-size="26" font-weight="700" fill="#0757C8">View the activities →</text>
   </g>
 </svg>
